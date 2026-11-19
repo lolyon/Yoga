@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yoga with Client Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<aside id="sidebar">
+  <a class="brand" href="#about" id="brand"></a>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#classes">Classes</a>
+    <a href="#book">Book appointment</a>
+  </nav>
+</aside>
+
+<main>
+  <section id="about">
+    <div class="yoga-intro">
+      <h2 id="yoga-heading"></h2>
+      <div id="yoga-text"></div>
+    </div>
+    <div class="teacher">
+      <div class="teacher-photo" id="teacher-photo"><img id="teacher-img" alt=""></div>
+      <div class="teacher-bio">
+        <h2 id="teacher-name"></h2>
+        <p class="role" id="teacher-title"></p>
+        <div id="teacher-text"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="classes">
+    <h2>Classes</h2>
+    <ul id="class-list"></ul>
+  </section>
+
+  <section id="book">
+    <h2>Book appointment</h2>
+    <p>Tell us which class you'd like and when. Your email app will open with the request ready to send.</p>
+    <form id="book-form">
+      <label>Your name <input name="name" required autocomplete="name"></label>
+      <label>Your email <input name="email" type="email" required autocomplete="email"></label>
+      <label>Class <select name="class" id="class-select" required></select></label>
+      <label>Preferred date <input name="date" type="date" required></label>
+      <label class="wide">Message (optional) <textarea name="message" rows="4"></textarea></label>
+      <button type="submit">Send request</button>
+      <p id="book-note" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
